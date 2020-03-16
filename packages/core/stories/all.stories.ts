@@ -99,8 +99,6 @@ storybookDemoGroups.forEach(demoGroup => {
 	<span><b>Props: </b><span>data, </span><a href="https://carbon-design-system.github.io/carbon-charts/documentation/modules/_interfaces_charts_.html" target="_blank">options</a></span>
 </p>
 
-${storyUtils.generateThemePickerHTML()}
-
 <div class="marginTop-30" id="chart-demo">
 </div>
 
@@ -137,8 +135,6 @@ if (process.env.NODE_ENV !== "production") {
 	<h3>
 		<b class="component">Collection of all demos</b>
 	</h3>
-
-	${storyUtils.generateThemePickerHTML()}
 `;
 
 		storyUtils.addRadioButtonEventListeners(container);

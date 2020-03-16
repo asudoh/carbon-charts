@@ -1,5 +1,7 @@
 import { configure } from "@storybook/html";
+import addons from '@storybook/addons';
 import { setOptions } from "@storybook/addon-options";
+import { CURRENT_THEME } from './addon-carbon-theme/shared';
 import theme from './theme';
 
 setOptions({
@@ -9,6 +11,10 @@ setOptions({
   panelPosition: 'bottom',
   showDownPanel: true,
   theme
+});
+
+addons.getChannel().on(CURRENT_THEME, theme => {
+  document.documentElement.setAttribute('storybook-carbon-theme', theme);
 });
 
 const req = require.context("../stories", true, /.stories.ts$/);

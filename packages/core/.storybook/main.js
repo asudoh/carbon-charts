@@ -13,6 +13,11 @@ module.exports = {
 				{
 					loader: "sass-loader",
 					options: {
+						prependData: `
+							$feature-flags: (
+								enable-css-custom-properties: true,
+							);
+						`,
 						sassOptions: {
 							includePaths: [path.resolve(__dirname + "../src")]
 						}
